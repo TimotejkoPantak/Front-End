@@ -1,6 +1,6 @@
 import { Item } from "./items/item";
 
-export const ITEMS: Item[] = [
+export const Items: Item[] = [
 {id:1, name: 'Frajerina', price:900},
 {id:2, name: 'Sila', price: 1000},
 {id:3, name: 'Obrana', price: 560},

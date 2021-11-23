@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Hero } from '../heroes/hero';
-import { ITEMS } from '../mock-items';
+import { Items } from '../mock-items';
 
 
 @Component({
