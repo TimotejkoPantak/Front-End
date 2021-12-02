@@ -3,6 +3,7 @@ import { Item } from './item';
 import { Items } from '../mock-items';
 import { ItemService } from '../item.service';
 import { MessageService } from '../message.service';
+import { ITEMS } from '../mock-items';
 
 @Component({
   selector: 'app-items',
@@ -11,7 +12,7 @@ import { MessageService } from '../message.service';
 })
 export class ItemsComponent implements OnInit {
 
-  items: Item[] = [];
+  items = ITEMS;
   selectedItem?: Item;
 
   onSelect(item: Item): void {

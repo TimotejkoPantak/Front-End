@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Item } from '../items/item';
-import { Items } from '../mock-items';
 
 @Component({
   selector: 'app-item-detail',
@@ -9,9 +8,7 @@ import { Items } from '../mock-items';
 })
 export class ItemDetailComponent implements OnInit {
   constructor() { }
-  items = Items;
   @Input() item? : Item;
   ngOnInit(): void {
   }
-
 }

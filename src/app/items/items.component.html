@@ -1,11 +1,9 @@
-<h2 class="hero_items" style="margin-left: 350px;">Hero Items</h2>
-
+<h2>My Items</h2>
 <ul class="items">
-  <li *ngFor="let item of items"
-  [class.selected]="item === selectedItem"
-  (click)="onSelect(item)">
-  <span class="badge1">{{item.id}}</span> {{item.name}} | {{item.price}}
-</li>
+  <li *ngFor="let item of items" 
+    [class.selected]="item === selectedItem"
+    (click) = "onSelect(item)">
+    <span class="badge">{{item.id}}</span> {{item.name}}
+  </li>
 </ul>
-
 <app-item-detail [item]="selectedItem"></app-item-detail>
