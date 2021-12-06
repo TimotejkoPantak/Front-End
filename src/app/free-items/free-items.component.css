@@ -1,0 +1,28 @@
+span {
+    font-weight: bolder;
+}
+
+h2{
+    font-size: medium;
+    color: rgb(161, 55, 55);
+    font-weight: bolder;
+}
+
+button {
+    margin-top: 4px;
+    background-color: #cef0ff;
+    color: #2445a8;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-left: 4px;
+    font-weight: bolder;
+}
+button:hover {
+    background-color: #9fe1fd;
+}
+button:disabled {
+    background-color: #eee;
+    color: #ccc;
+    cursor: auto;
+}

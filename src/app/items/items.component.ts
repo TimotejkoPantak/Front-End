@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from './item';
-import { Items } from '../mock-items';
+import { ITEMS, Items } from '../mock-items';
 import { ItemService } from '../item.service';
 import { MessageService } from '../message.service';
-import { ITEMS } from '../mock-items';
 
 @Component({
   selector: 'app-items',
@@ -20,19 +19,17 @@ export class ItemsComponent implements OnInit {
     this.messageService.add('ItemsComponent: Selected item id=$(item.id)');
   }
 
-
-
   constructor(private itemService: ItemService, private messageService: MessageService ) { }
 
   getItems(): void {
     this.itemService.getItems()
       .subscribe(items=> this.items = items);
   }
-
-
+  
   ngOnInit(): void {
     this.getItems();
   }
 
+  }
 
-}
+

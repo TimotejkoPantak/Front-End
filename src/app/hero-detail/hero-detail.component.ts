@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-
+import { ITEMS } from '../mock-items';
 import { Hero } from '../heroes/hero';
 import { HeroService } from '../hero.service';
 
@@ -23,6 +23,8 @@ export class HeroDetailComponent implements OnInit {
     this.getHero();
   }
 
+  click(): void { }
+
   getHero(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.heroService.getHero(id)
@@ -31,5 +33,8 @@ export class HeroDetailComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+
+  
   }
+
 }
