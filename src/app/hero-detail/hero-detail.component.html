@@ -10,11 +10,12 @@
   </div>
   <div>
     <span><label>Money: </label> </span><label>{{ hero.money }}</label><br>
-    <button (click)="click()"><a routerLink="/items-free/{{hero.id}}">Buy Item</a></button>
+    <button (click)="click()"><a routerLink="/free-items/{{hero.id}}">Buy Item</a></button>
     <button (click)="goBack()">Go back</button>
   </div>
 
   <div class="items" *ngFor="let item of hero.items"> 
-    <app-item-detail [item]="item"></app-item-detail>
+  <div>
+    <app-item-detail [item]="item" (deleteEvent)="sellItems(item)"></app-item-detail>
   </div>
 </div>
