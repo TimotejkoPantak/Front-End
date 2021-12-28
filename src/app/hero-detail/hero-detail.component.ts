@@ -55,4 +55,11 @@ export class HeroDetailComponent implements OnInit {
         this.hero.items.splice(index, 1);
     }
   }
+
+  save(): void {
+    if (this.hero) {
+      this.heroService.updateHero(this.hero)
+        .subscribe(() => this.goBack());
+    }
+  }
 }
