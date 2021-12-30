@@ -1,7 +1,9 @@
 <div *ngIf="item">
+<div *ngIf="item of items"></div>
 
   <h2>{{item.name}} Details</h2>
   <div id="itemId"><span>id: </span>{{item.id}}</div>
   <div id="itemPrice"><span>price: </span>{{item.price}}</div>   
   <button *ngIf = "!item.isAvailable" (click)="callParrentDelete()">Sell</button> 
+  <button (click)="save()">save</button> 
 </div>

@@ -23,7 +23,21 @@ export class ItemsComponent implements OnInit {
 
   getItems(): void {
     this.itemService.getItems()
-      .subscribe(items=> this.items = items);
+    .subscribe(items => this.items = items);
+  }
+
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.itemService.addItem({ name } as unknown as Item)
+      .subscribe(item => {
+        this.items.push(item);
+    });
+  }
+
+  delete(item: Item): void {
+    this.items = this.items.filter(h => h !== item);
+    this.itemService.deleteItem(item.id).subscribe();
   }
   
   ngOnInit(): void {
