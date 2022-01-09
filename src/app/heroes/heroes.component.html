@@ -4,14 +4,14 @@
     <a routerLink="/detail/{{hero.id}}">
       <span class="badge">{{hero.id}}</span> {{hero.name}}
     </a>
-    <button class="delete" title="delete hero"
+    <button mat-stroked-button color="accent"  class="delete" title="delete hero"
       (click)="delete(hero)">x</button>
   </li>
 </ul>
 <div>
   <label for="new-hero">Hero name: </label>
   <input id="new-hero" #heroName />
-  <button mat-raised-button color="primary" class="add-button" (click)="add(heroName.value); heroName.value=''">
+  <button mat-stroked-button color="accent" class="add-button" (click)="add(heroName.value); heroName.value=''">
     Add hero
   </button>
 </div>
