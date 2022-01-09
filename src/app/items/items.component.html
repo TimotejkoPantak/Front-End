@@ -7,15 +7,16 @@
     <a routerLink="/item-detail/{{item.id}}">
       <span class="badge">{{item.id}}</span> {{item.name}}
     </a>
-    <button class="delete" title="delete item"
-      (click)="delete(item)">X</button>
+    <button mat-raised-button class="delete" title="delete item"
+    (click)="delete(item)">X</button>
   </li>
+
 </ul>
 
 <div>
   <label for="new-item">Item name: </label>
   <input id="new-item" #itemName />
-  <button class="add-button" (click)="add(itemName.value); itemName.value=''">
+  <button mat-button color="primary" class="add-button" (click)="add(itemName.value); itemName.value=''">
     Add Item
   </button>
 </div>

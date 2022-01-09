@@ -15,6 +15,9 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { ItemSearchComponent } from './item-search/item-search.component';
+import { MatButtonModule} from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MatSliderModule } from '@angular/material/slider';
 
 
 @NgModule({
@@ -31,15 +34,19 @@ import { ItemSearchComponent } from './item-search/item-search.component';
     ItemSearchComponent,
   ],
   imports: [
+    MatButtonModule,
     BrowserModule,
     FormsModule,
+    MatSliderModule,
     AppRoutingModule,
     HttpClientModule,
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
-    InMemoryDataService, { dataEncapsulation: false })],
+    InMemoryDataService, { dataEncapsulation: false }),
+    BrowserAnimationsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }
