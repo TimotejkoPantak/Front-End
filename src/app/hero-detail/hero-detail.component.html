@@ -10,6 +10,8 @@
   </div>
   <div>
     <span><label>Money: </label> </span><label>{{ hero.money }}</label><br>
+    <span><label>Lives: </label> </span><label>{{ hero.life }}</label><br>
+    <span><label>Strength: </label> </span><label>{{ hero.strength }}</label><br>
     <button (click)="click()"><a routerLink="/free-items/{{hero.id}}">Buy Item</a></button>
     <button (click)="goBack()">Go back</button>
   </div>
