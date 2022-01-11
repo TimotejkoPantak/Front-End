@@ -13,8 +13,8 @@
 </ul>   
 
 <div>
-  <label for="new-item">Item name: </label>
-  <input id="new-item" #itemName />
+  <label for="new-item"> </label>
+  <input matInput placeholder="Item name" id="new-item" #itemName />
   <button mat-stroked-button color="accent" class="add-button" (click)="add(itemName.value); itemName.value=''">
     Add Item
   </button>

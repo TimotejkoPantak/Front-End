@@ -18,6 +18,7 @@ import { ItemSearchComponent } from './item-search/item-search.component';
 import { MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatSliderModule } from '@angular/material/slider';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { MatSliderModule } from '@angular/material/slider';
     FormsModule,
     MatSliderModule,
     AppRoutingModule,
+    MatToolbarModule,
     HttpClientModule,
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.

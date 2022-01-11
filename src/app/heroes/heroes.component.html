@@ -9,8 +9,8 @@
   </li>
 </ul>
 <div>
-  <label for="new-hero">Hero name: </label>
-  <input id="new-hero" #heroName />
+  <label for="new-hero"> </label>
+  <input matInput placeholder="Hero name" id="new-hero" #heroName />
   <button mat-stroked-button color="accent" class="add-button" (click)="add(heroName.value); heroName.value=''">
     Add hero
   </button>
