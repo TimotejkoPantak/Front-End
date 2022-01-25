@@ -19,6 +19,7 @@ import { MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatSliderModule } from '@angular/material/slider';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { HeroFormComponent } from './hero-form/hero-form.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     FreeItemsComponent,
     HeroSearchComponent,
     ItemSearchComponent,
+    HeroFormComponent,
   ],
   imports: [
     MatButtonModule,
